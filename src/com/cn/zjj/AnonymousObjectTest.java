@@ -2,6 +2,8 @@ package com.cn.zjj;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by zjjfly on 16/1/27.
@@ -16,6 +18,13 @@ public class AnonymousObjectTest{
         }.dos();
         http://www.baidu.com
         System.out.println("");
+        //使用初始化块快速创建对象
+        Map map= new HashMap<Integer,String>(){
+            {
+                put(1,"hah");
+            }
+        };
+        System.out.println(map.get(1));
 
     }
 
